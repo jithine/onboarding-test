@@ -2,6 +2,7 @@ jobs:
   main:
     template: sd/noop
     requires: [~pr, ~commit]
+    image: maven:3.6.3-jdk-8
     steps:
       - noop: |
           sd-cmd exec screwdriver/install-nodejs@latest 12
