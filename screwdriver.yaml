@@ -6,6 +6,5 @@ jobs:
     steps:
       - noop: |
           sd-cmd exec screwdriver/install-nodejs@latest 12
-          . "$HOME/.nvm/nvm.sh" 
-          nvm use 12
+          export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" && nvm use node
           node --version
