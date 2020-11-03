@@ -2,3 +2,7 @@ jobs:
   main:
     template: sd/noop
     requires: [~pr, ~commit]
+    steps:
+      - noop: |
+          sd-cmd exec screwdriver/install-nodejs@latest 12
+          node --version
